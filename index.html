@@ -3,14 +3,74 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <style>
+      .class1:-webkit-file-upload-button {
+        float: right;
+      }
+      .row {
+        border: 1px solid grey;
+        padding: 5px;
+        margin: 5px;
+      }
+      .grid-container {
+          display: grid;
+          grid-template-columns: 450px 80px 200px auto 200px;
+      }
+      .inlinedisplay {
+        display: inline-block;
+      }
+      .spaciousElement {
+        padding: 5px;
+      }
+      .spaciousElement>* {
+        height: 40px;
+      }
+      .floatright {
+        float: right;
+      }
+      .nopadding {
+        padding:0px;
+      }
+      .inputtextwidth {
+        width: 1000px;
+      }
+      .padding20 {
+        padding: 20px;
+      }
+      .margin20 {
+        margin: 0 10px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
+    <h1>File Explorer</h1>
+    <div class="spaciousElement">
+      <!-- <input type="text" class="inputtextwidth" placeholder="type your tags to search.." maxlength="500"></input>
+      <button>Search Tags</button> -->
+      <label class="padding20">Folders: </label>
+      <input id="selectedfolders" class="inputtextwidth" type="text" 
+                                        placeholder="Selected folders paths displayed here.." disabled></input>
+      <button class="inlinedisplay margin20" id="folderchooser">Choose folder to list files</button>
+      <button class="inlinedisplay floatright margin20" id="clearselection">Clear</button>
+    </div>
+    <div>
+      <ul id="filelist" class="nopadding">
+      </ul>
+    </div>
+    <template id="filerec">
+      <div class="row">
+          <li class="grid-container">
+              <span><strong></strong></span>
+              <span>234234</span>
+              <span>234</span>
+              <span></span>
+              <!-- <button class="addtag">Add Tag</button> -->
+          </li>
+      </div>
+    </template>
     <!-- You can also require other files to run in this process -->
-    <script src="./dist/renderer.js"></script>
+    <script>
+      require('./dist/renderer.js');
+    </script>
   </body>
 </html>

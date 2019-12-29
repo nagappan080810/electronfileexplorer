@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start-typescript",
+  "name": "electron-fileexplorer",
   "version": "1.0.0",
-  "description": "A minimal Electron application written with Typescript",
+  "description": "A minimal Electron  file explorer application written with Typescript",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -20,8 +20,13 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^6.0.8",
-    "tslint": "^5.19.0",
-    "typescript": "^3.6.0"
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "copyfiles": "^2.1.1",
+    "electron": "^7.1.3",
+    "electron-builder": "^21.2.0",
+    "eslint": "^6.7.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
   }
 }
